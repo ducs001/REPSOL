@@ -22,3 +22,10 @@ class ArregloProductos :
    
     def eliminarProducto(self, indice):
         del(self.dataProductos[indice])
+
+    def actualizarStock(self, cantidad, codigoProducto):
+        for i in range(self.tamañoArregloProducto()):
+            #objPro = self.dataProductos[i] 
+            if self.dataProductos[i].getCodigo() == codigoProducto:
+                self.dataProductos[i].setStockActual(cantidad)
+                #objPro.setStockActual(cantidad)
